@@ -1,5 +1,29 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Prerequisites
+
+Be sure you have the following installed on your development machine:
+
+```
+1. git
+2. bun
+```
+ 
+## Setup
+
+Clone the repository:
+
+```powershell
+git clone https://github.com/adityanithariya/VisualFeast.git
+cd VisualFeast
+```
+
+Then install the dependencies:
+
+```bash
+bun install
+```
+
 ## Getting Started
 
 First, run the development server:
@@ -7,20 +31,19 @@ First, run the development server:
 ```bash
 npm run dev
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Learn More
+
+To learn more about VisualFeast:
+
+- Discovered [Netlify Image CDN](https://docs.netlify.com/image-cdn/overview/) for seamless image transformations on demand.
+- Utilized [Netlify Blobs](https://docs.netlify.com/blobs/overview/) for efficient blob storage and retrieval with integrated metadata handling.
+- Harnessed [Netlify's fine-grained cache control capabilities](https://docs.netlify.com/platform/caching/) for implementing custom Cache-Control headers.
 
 To learn more about Next.js, take a look at the following resources:
 

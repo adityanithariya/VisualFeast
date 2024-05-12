@@ -11,7 +11,7 @@ import {
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
-const useAuth = ({ loginURL, logoutURL }) => {
+const useAuth = (loginURL, logoutURL) => {
   const auth = getAuth(app)
   const router = useRouter()
   const [isLoading, setLoading] = useState(true)
@@ -63,12 +63,13 @@ const useAuth = ({ loginURL, logoutURL }) => {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
+        setUser(user)
         setIsAuthenticated(true)
       } else setIsAuthenticated(false)
       loginURL && router.replace(loginURL)
       setLoading(false)
     })
-  }, [auth, router, setIsAuthenticated, loginURL])
+  }, [auth, router, setUser, setIsAuthenticated, loginURL])
 
   return { user, isAuthenticated, setUser, signup, login, logout, isLoading }
 }
